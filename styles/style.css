@@ -4,10 +4,11 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: monospace, Arial, Helvetica, sans-serif;
   font-size: 80px;
   font-weight: bold;
   padding: 40px 0;
+  background-image: url("../img/time.webp");
 }
 
 #clock {
@@ -18,6 +19,8 @@ body {
   margin: 0 auto;
   padding: 18px 0;
   width: 245px;
+  background-color: white;
+  
 }
 
 #sphere {
@@ -39,11 +42,16 @@ body {
   font-weight: 100;
   position: absolute;
   left: 50px;
+  width: 200px;
+  padding-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+
 }
 
 #splits-container li {
   padding-bottom: 5px;
-  text-align: right;
+  text-align: left;
 }
 
 #centiseconds {
@@ -54,8 +62,8 @@ body {
 }
 
 .leash {
-  background: rgb(204, 84, 87);
-  border: 2px solid rgb(134, 59, 61);
+  background: rgb(0, 96, 156);
+  border: 2px solid rgb(0, 70, 151);
   height: 50px;
   margin: 0 auto;
   width: 120px;

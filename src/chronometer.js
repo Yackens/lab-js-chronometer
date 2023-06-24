@@ -9,17 +9,22 @@ class Chronometer {
     this.intervalId = setInterval(() => {
       this.currentTime ++;
       if (printTimeCallback) printTimeCallback();
-    }, 1000)
+    }, 10)
   }
 
   getMinutes() {
     // ... your code goes here
-    return Math.floor(this.currentTime/60);
+    return Math.floor(this.currentTime/6000);
   }
 
   getSeconds() {
     // ... your code goes here
-    return (this.currentTime%60);
+    return (Math.floor(this.currentTime / 100) % 60);
+  }
+
+  getCentiseconds() {
+    // ... your code goes here
+    return (this.currentTime%100);
   }
 
   computeTwoDigitNumber(value) {
@@ -46,6 +51,7 @@ class Chronometer {
     // ... your code goes here
     let minutes = this.getMinutes();
     let seconds = this.getSeconds();
-    return  `${this.computeTwoDigitNumber(minutes)}:${this.computeTwoDigitNumber(seconds)}`;
+    let centiseconds = this.getCentiseconds();
+    return  `${this.computeTwoDigitNumber(minutes)}:${this.computeTwoDigitNumber(seconds)}.${this.computeTwoDigitNumber(centiseconds)}`;
   }
 }
